@@ -20,6 +20,7 @@ router
 .post(isLoggedIn,upload.single("listing[image]"),validateListing,wrapAsync(listingController.createListing));
 
 router.get("/new",isLoggedIn,listingController.renderNewForm);
+router.get("/",wrapAsync(listingController.index))
 router
 .route("/:id")
 .get(wrapAsync(listingController.showListings))
