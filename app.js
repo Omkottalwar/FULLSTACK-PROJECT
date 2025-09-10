@@ -23,7 +23,7 @@ const localStrategy=require("passport-local")
 const User=require("./models/user.js")
 
 app.get("/",(req,res)=>{
-    res.render("/listings")
+    res.send("hello")
 })
 const dbUrl=process.env.ATLASDB_URL;
 async function main() {
