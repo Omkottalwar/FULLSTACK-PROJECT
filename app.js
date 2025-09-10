@@ -50,7 +50,6 @@ const sessionOption={
         httpOnly: true,
     }
 }
-app.use("/",listingsRouter);
 app.use(session(sessionOption));
 app.use(flash());
 app.use(passport.initialize());
