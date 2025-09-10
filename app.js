@@ -21,10 +21,6 @@ const flash=require("express-flash")
 const passport=require("passport")
 const localStrategy=require("passport-local")
 const User=require("./models/user.js")
-
-app.get("/",(req,res)=>{
-    res.send("hello")
-})
 const dbUrl=process.env.ATLASDB_URL;
 async function main() {
   await  mongoose.connect(dbUrl);   
